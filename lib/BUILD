@@ -6,3 +6,11 @@ cc_library(
     hdrs = ["hello-time.h"],
     visibility = ["//main:__pkg__"],
 )
+cc_test(
+    name = "hello-time-test",
+    srcs = ["hello-time-test.cc"],
+    deps = [
+        ":hello-time",
+        "@googletest//:gtest_main",
+    ],
+)
